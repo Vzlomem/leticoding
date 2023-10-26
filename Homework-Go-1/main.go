@@ -137,25 +137,3 @@ func NewFromSlice(s []int) *LinkedList {
 	}
 	return list
 }
-
-func main() {
-	List := New(4)
-	fmt.Println(List.Size())
-
-	List = NewFromSlice([]int{-11, 22, 33, 44, -55, 66, -77})
-	fmt.Println(List.Size())
-	fmt.Println("[0]:", List.At(0))
-	fmt.Println("[3]:", List.At(3))
-	fmt.Println("[6]:", List.At(6))
-
-	List.Add(100)
-	List.Add(200)
-	List.UpdateAt(0, 50)
-	List.UpdateAt(1, -243)
-	fmt.Println(List.Size())
-
-	List.Pop()
-	List.DeleteFrom(0)
-	List.DeleteFrom(3)
-	fmt.Println(List.Size())
-}
